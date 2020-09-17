@@ -6,6 +6,9 @@ def convolucion(kernel, nombreKernel):
      ruta = 'ojo.jpg'
      im = cv2.imread(ruta, cv2.IMREAD_GRAYSCALE)
      
+     kernelBordes = np.array([[-2,-1,0],[-1,1,1],[0,1,2]])
+     prefiltro = cv2.filter2D(im, -1, kernelBordes)
+
      filtro = cv2.filter2D(im, -1, kernel)
      
      nombreKernel = 'Convolucion ' + nombreKernel
