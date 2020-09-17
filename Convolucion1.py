@@ -15,7 +15,7 @@ def convolucion(kernel, nombreKernel):
     cv2.destroyAllWindows
 
 
-sobelMyKernel = np.array([[1,2,1],[0,0,0],[-1,-2,-1]])/159 
+sobelMyKernel = np.array([[1,2,1],[0,0,0],[-1,-2,-1]]) 
 convolucion(sobelMyKernel, "Sobel My")
 
 
