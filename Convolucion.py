@@ -20,7 +20,9 @@ def convolucion(kernel, nombreKernel):
 
 scharrKernelHorizontal = np.array([[-3, 0, 3], [-10, 0, 10], [-3, 0, 3]])
 convolucion(scharrKernelHorizontal, "Scharr")
+
 scharrKernelVertical = np.array([[-3, -10, -3], [0, 0, 0], [3, 10, 3]])
 convolucion(scharrKernelVertical, "Scharr")
 
-
+cannyKernel = np.array([[2,4,5,4,2],[4,9,12,9,4],[5,12,15,12,5],[4,9,12,9,4],[2,4,5,4,2]])/159
+convolucion(cannyKernel, "Canny")
