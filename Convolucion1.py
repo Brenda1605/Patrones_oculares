@@ -1,17 +1,21 @@
-def convolucion(a, nombreKernel):
 import cv2
 import numpy as np
 
-ruta = 'ojo.jpg'
-im = cv2.imread(ruta, cv2.IMREAD_GRAYSCALE)
+def convolucion(kernel, nombreKernel):
 
-kernel = np.asarray(a)
+    ruta = 'ojo.jpg'
+    im = cv2.imread(ruta, cv2.IMREAD_GRAYSCALE)
 
-filtro = cv2.filter2D(im, -1, kernel)
+    filtro = cv2.filter2D(im, -1, kernel)
 
-nombreKernel = 'Convolucion ' + nombreKernel
-cv2.imshow(nombreKernel ,filtro)
-cv2.waitKey(0)
-cv2.destroyAllWindows
+    nombreKernel = 'Convolucion ' + nombreKernel
+    cv2.namedWindow(nombreKernel, cv2.WINDOW_KEEPRATIO)
+    cv2.imshow(nombreKernel ,filtro)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows
 
-convolucion([[1,2,1],[0,0,0],[-1,-2,-1]], "Sobel My")
+
+sobelMyKernel = np.array([[1,2,1],[0,0,0],[-1,-2,-1]])/159 
+convolucion(sobelMyKernel, "Sobel My")
+
+
