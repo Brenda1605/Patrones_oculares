@@ -16,5 +16,5 @@ def convolucion(a, nombreKernel):
     cv2.destroyAllWindows
 
 
-scharrKernel = [[-3, 0, 3], [-10, 0, 10], [-3, 0, 3]]
-convolucion(scharrKernel, "Scharr")
+scharrKernelHorizontal = [[-3, 0, 3], [-10, 0, 10], [-3, 0, 3]]
+convolucion(scharrKernelHorizontal, "Scharr")

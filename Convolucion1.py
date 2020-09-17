@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 
+
 def convolucion(a, nombreKernel):
     ruta = 'ojo.jpg'
     im = cv2.imread(ruta, cv2.IMREAD_GRAYSCALE)
@@ -14,5 +15,6 @@ def convolucion(a, nombreKernel):
     cv2.waitKey(0)
     cv2.destroyAllWindows
 
-scharrKernel = [[-3, -10, -3], [0, 0, 0], [3, 10, 3]]
-convolucion(scharrKernel, "Scharr")
+
+scharrKernelVertical = [[-3, -10, -3], [0, 0, 0], [3, 10, 3]]
+convolucion(scharrKernelVertical, "Scharr")
