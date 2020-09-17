@@ -20,3 +20,6 @@ def convolucion(kernel, nombreKernel):
 sobelMxKernel = np.array([[-1,0,1],[-2,0,2],[-1,0,1]])
 convolucion(sobelMxKernel,"Sobel Mx")
 
+sobelMyKernel = np.array([[1,2,1],[0,0,0],[-1,-2,-1]]) 
+convolucion(sobelMyKernel, "Sobel My")
+
