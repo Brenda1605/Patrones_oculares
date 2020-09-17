@@ -1,11 +1,15 @@
 import cv2
 import numpy as np
 
+
 def convolucion(kernel, nombreKernel):
-    ruta = 'ojo.jpg'
+    ruta = 'ojoPrueba.jpeg'
     im = cv2.imread(ruta, cv2.IMREAD_GRAYSCALE)
 
-    filtro = cv2.filter2D(im, -1, kernel)
+    kernelBordes = np.array([[-2, -1, 0], [-1, 1, 1], [0, 1, 2]])
+    prefiltro = cv2.filter2D(im, -1, kernelBordes)
+
+    filtro = cv2.filter2D(prefiltro, -1, kernel)
 
     nombreKernel = 'Convolucion: ' + nombreKernel
     cv2.namedWindow(nombreKernel, cv2.WINDOW_KEEPRATIO)
