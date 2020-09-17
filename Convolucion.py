@@ -14,5 +14,4 @@ def convolucion(a, nombreKernel):
      cv2.waitKey(0)
      cv2.destroyAllWindows
 
-convolucion([[1,1,1],[1,1,1],[1,1,1]], "Kernel")
-
+convolucion([[0,1,0],[1,-4,1],[0,1,0]], "Laplacian")
