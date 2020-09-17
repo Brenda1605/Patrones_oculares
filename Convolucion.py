@@ -1,7 +1,3 @@
-import cv2
-import numpy as np
-
-
 def convolucion(kernel, nombreKernel):
     ruta = 'ojo.jpg'
     im = cv2.imread(ruta, cv2.IMREAD_GRAYSCALE)
@@ -32,3 +28,9 @@ convolucion(sobelMxKernel,"Sobel Mx")
 
 sobelMyKernel = np.array([[1,2,1],[0,0,0],[-1,-2,-1]]) 
 convolucion(sobelMyKernel, "Sobel My")
+
+prewittKernelX = np.array([[1,1,1],[0,0,0],[-1,-1,-1]])
+convolucion(prewittKernelX, "Prewitt X")
+
+prewittKernelY = np.array([[-1,0,1],[-1,0,1],[-1,0,1]])
+convolucion(prewittKernelY, "Prewitt Y")
