@@ -26,3 +26,9 @@ convolucion(scharrKernelVertical, "Scharr")
 
 cannyKernel = np.array([[2,4,5,4,2],[4,9,12,9,4],[5,12,15,12,5],[4,9,12,9,4],[2,4,5,4,2]])/159
 convolucion(cannyKernel, "Canny")
+
+sobelMxKernel = np.array([[-1,0,1],[-2,0,2],[-1,0,1]])
+convolucion(sobelMxKernel,"Sobel Mx")
+
+sobelMyKernel = np.array([[1,2,1],[0,0,0],[-1,-2,-1]]) 
+convolucion(sobelMyKernel, "Sobel My")
