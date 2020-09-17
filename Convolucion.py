@@ -20,3 +20,6 @@ def convolucion(kernel, nombreKernel):
 
 scharrKernelHorizontal = [[-3, 0, 3], [-10, 0, 10], [-3, 0, 3]]
 convolucion(scharrKernelHorizontal, "Scharr")
+
+scharrKernelVertical = [[-3, -10, -3], [0, 0, 0], [3, 10, 3]]
+convolucion(scharrKernelVertical, "Scharr")
