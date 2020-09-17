@@ -14,6 +14,6 @@ def convolucion(kernel, nombreKernel):
      cv2.waitKey(0)
      cv2.destroyAllWindows
 
-sobelMxKernel = np.array([[-1,0,1],[-2,0,2],[-1,0,1]])/159
+sobelMxKernel = np.array([[-1,0,1],[-2,0,2],[-1,0,1]])
 convolucion(sobelMxKernel,"Sobel Mx")
 
