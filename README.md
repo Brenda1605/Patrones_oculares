@@ -32,12 +32,6 @@ Los patrones interferenciales oculares a ser identificados son:
 * Patrón Coloreado: Se pueden observar líneas de colores amarillo, café y azul. El problema que presentan los pacientes con este patrón es que el lente de contacto se puede contaminar fácilmente ya que se presenta una gran cantidad de lípidos.
 <img src="Imagenes/franjasColoreadas.jpg" width = "200">
 
-IMAGEN DE RESULTADO IMPLEMENTADO EL CÓDIGO EN PATRÓN MARMÓREO ABIERTO
-
-<p align = "center">
-<img src="Imagenes/ejemplo.jpg">
-</p>
-
 Los filtros utilizados en las pruebas de Patrones Oculares son:
 * Repujado -> utilizado como prefiltro para la sobreexposición de bordes y facilitar la detección de los mismos.
 * Sobel
@@ -45,6 +39,12 @@ Los filtros utilizados en las pruebas de Patrones Oculares son:
 * Prewitt
 * Laplasian
 * Scharr
+
+IMAGEN DE RESULTADO IMPLEMENTADO EL CÓDIGO EN PATRÓN MARMÓREO ABIERTO
+
+<p align = "center">
+<img src="Imagenes/ejemplo.jpg">
+</p>
 
 #### Ejecución y pruebas del programa
 La manera en la que se debe ejecutar el programa es utilizando alguna terminal de Linux o de Mac o bien instalar un emulador de Linux en Windows. 
