@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 
-
 # This function called convolucion receives two parameters which are the kernel
 # that the function is going to use and the name of the filter/kernel.  It uses
 # functions from the cv2 and numpy libraries to convert the image into an array
@@ -17,6 +16,10 @@ def convolution(kernel, kernelName):
     kernelBorders = np.array([[-2, -1, 0], [-1, 1, 1], [0, 1, 2]])
     prefilter = cv2.filter2D(im, -1, kernelBorders)
 
+    cannyKernel = np.array([[2, 4, 5, 4, 2], [4, 9, 12, 9, 4], [5, 12, 15, 12, 5], [4, 9, 12, 9, 4], [2, 4, 5, 4, 2]])
+    cannyKernel =  cannyKernel / 159
+    prefilter = cv2.filter2D(prefilter, -1, cannyKernel)
+
     filter = cv2.filter2D(prefilter, -1, kernel)
 
     kernelName = "Convolution: " + kernelName
@@ -28,9 +31,6 @@ def convolution(kernel, kernelName):
 
 # Variables hold the kernel for each corresponding filter
 # Each kernel is assigned to the function convolution, with its corresponding name for use in display
-
-cannyKernel = np.array([[2, 4, 5, 4, 2], [4, 9, 12, 9, 4], [5, 12, 15, 12, 5], [4, 9, 12, 9, 4], [2, 4, 5, 4, 2]]) / 159
-convolution(cannyKernel, "Canny")
 
 LaplacianKernel = np.array([[0, 1, 0], [1, -4, 1], [0, 1, 0]])
 convolution(LaplacianKernel, "Laplacian")
