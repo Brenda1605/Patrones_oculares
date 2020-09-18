@@ -6,6 +6,9 @@
 # new array with the kernel that the funtion received.  Then we show the resulting
 # image after applying those kernels.
 
+import cv2
+import numpy as np
+
 def convolucion(kernel, nombreKernel):
     ruta = 'ojo.jpg'
     im = cv2.imread(ruta, cv2.IMREAD_GRAYSCALE)
