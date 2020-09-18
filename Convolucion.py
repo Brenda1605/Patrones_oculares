@@ -49,3 +49,6 @@ convolution(prewittKernelX, "Prewitt X")
 
 prewittKernelY = np.array([[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]])
 convolution(prewittKernelY, "Prewitt Y")
+
+LaplacianKernel = np.array([[0, 1, 0], [1, -4, 1], [0, 1, 0]])
+convolution(LaplacianKernel, "Laplacian")
