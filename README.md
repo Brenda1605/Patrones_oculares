@@ -54,6 +54,7 @@ Lo que se debe mostrar es el la imagen del patrón filtrada con las diferentes m
 
 #### Programa construido con
 * Python
+* OpenCV
 * Terminal Ubuntu
 
 #### Autores
