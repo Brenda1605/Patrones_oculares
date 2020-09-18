@@ -1,6 +1,14 @@
 import cv2
 import numpy as np
 
+# This function called convolucion receives two parameters which are the kernel
+# that the function is going to use and the name of the filter/kernel.  It uses
+# functions from the cv2 and numpy libraries to convert the image into an array
+# with the values of the image (BGR) and first we multiply the array of the image
+# with a kernel to highlight the border of the image and then we multiply this
+# new array with the kernel that the funtion received.  Then we show the resulting
+# image after applying those kernels.
+
 def convolucion(kernel, nombreKernel):
 
      ruta = 'ojo.jpg'
