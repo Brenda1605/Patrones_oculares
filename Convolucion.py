@@ -17,11 +17,11 @@ def convolution(kernel, kernelName):
     kernelBorders = np.array([[-2, -1, 0], [-1, 1, 1], [0, 1, 2]])
     prefilter = cv2.filter2D(im, -1, kernelBorders)
 
-    filtro = cv2.filter2D(prefilter, -1, kernel)
+    filter = cv2.filter2D(prefilter, -1, kernel)
 
     kernelName = "Convolution: " + kernelName
     cv2.namedWindow(kernelName, cv2.WINDOW_KEEPRATIO)
-    cv2.imshow(kernelName, filtro)
+    cv2.imshow(kernelName, filter)
     cv2.waitKey(0)
     cv2.destroyAllWindows
 
@@ -31,6 +31,15 @@ def convolution(kernel, kernelName):
 
 cannyKernel = np.array([[2, 4, 5, 4, 2], [4, 9, 12, 9, 4], [5, 12, 15, 12, 5], [4, 9, 12, 9, 4], [2, 4, 5, 4, 2]]) / 159
 convolution(cannyKernel, "Canny")
+
+LaplacianKernel = np.array([[0, 1, 0], [1, -4, 1], [0, 1, 0]])
+convolution(LaplacianKernel, "Laplacian")
+
+prewittKernelX = np.array([[1, 1, 1], [0, 0, 0], [-1, -1, -1]])
+convolution(prewittKernelX, "Prewitt X")
+
+prewittKernelY = np.array([[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]])
+convolution(prewittKernelY, "Prewitt Y")
 
 scharrKernelHorizontal = np.array([[-3, 0, 3], [-10, 0, 10], [-3, 0, 3]])
 convolution(scharrKernelHorizontal, "Scharr horizontal")
@@ -43,12 +52,3 @@ convolution(sobelMxKernel, "Sobel Mx")
 
 sobelMyKernel = np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
 convolution(sobelMyKernel, "Sobel My")
-
-prewittKernelX = np.array([[1, 1, 1], [0, 0, 0], [-1, -1, -1]])
-convolution(prewittKernelX, "Prewitt X")
-
-prewittKernelY = np.array([[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]])
-convolution(prewittKernelY, "Prewitt Y")
-
-LaplacianKernel = np.array([[0, 1, 0], [1, -4, 1], [0, 1, 0]])
-convolution(LaplacianKernel, "Laplacian")
