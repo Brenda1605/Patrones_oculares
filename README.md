@@ -53,9 +53,9 @@ Posteriormente, se debe clonar el repositorio y correr el programa principal de 
 Lo que se debe mostrar es el la imagen del patrón filtrada con las diferentes máscaras.
 
 #### Programa construido con
-* Python
-* OpenCV
-* Terminal Ubuntu
+* Python 3.8.6
+* OpenCV 4.4.0
+* Terminal Ubuntu 18.04
 
 #### Autores
 Brenda Castillo - Creación del repositorio y branch Sobel
