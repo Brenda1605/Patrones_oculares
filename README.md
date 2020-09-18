@@ -19,14 +19,6 @@ La manera en la que se puede llevar a cabo este procedimiento es a través de la
 <img src="Imagenes/ojo1.jpg" width = "200">
 </p>
 
-Los filtros utilizados en las pruebas de Patrones Oculares son:
-* Repujado -> utilizado como prefiltro para la sobreexposición de bordes y facilitar la detección de los mismos.
-* Sobel
-* Canny
-* Prewitt
-* Laplasian
-* Scharr
-
 Los patrones interferenciales oculares a ser identificados son:
 * Patrón Marmóreo Abierto: Se forma una capa de color mármol grisáceo. Este patrón representa a los pacientes que presentar resequedad en el ojo al momento de utilizar lentes de contacto.
 <img src="Imagenes/abierto.jpg" width = "200">
@@ -45,6 +37,14 @@ IMAGEN DE RESULTADO IMPLEMENTADO EL CÓDIGO EN PATRÓN MARMÓREO ABIERTO
 <p align = "center">
 <img src="Imagenes/ejemplo.jpg">
 </p>
+
+Los filtros utilizados en las pruebas de Patrones Oculares son:
+* Repujado -> utilizado como prefiltro para la sobreexposición de bordes y facilitar la detección de los mismos.
+* Sobel
+* Canny
+* Prewitt
+* Laplasian
+* Scharr
 
 #### Ejecución y pruebas del programa
 La manera en la que se debe ejecutar el programa es utilizando alguna terminal de Linux o de Mac o bien instalar un emulador de Linux en Windows. 
